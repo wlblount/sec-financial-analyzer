@@ -45,7 +45,7 @@ FINANCIAL_CONCEPTS = {
 }
 
 class SECFilingFetcher:
-    def __init__(self, email: str = "bblount47@yahoo.com"):
+    def __init__(self, email: str = "email@yahoo.com"):
         self.base_url = "https://www.sec.gov"
         self.edgar_url = "https://www.sec.gov/edgar"
         self.submissions_url = "https://data.sec.gov/submissions"
@@ -262,7 +262,7 @@ def main():
     
     parser = argparse.ArgumentParser(description='Fetch financial data from SEC EDGAR')
     parser.add_argument('ticker', help='Stock ticker symbol')
-    parser.add_argument('--email', default='bblount47@yahoo.com', help='Email for SEC API authentication')
+    parser.add_argument('--email', default='email@yahoo.com', help='Email for SEC API authentication')
     args = parser.parse_args()
     
     fetcher = SECFilingFetcher(email=args.email)
